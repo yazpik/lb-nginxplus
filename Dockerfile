@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y -q wget apt-transport-https ca-certific
 # and copy to the build context
 ADD nginx-repo.crt /etc/ssl/nginx/
 ADD nginx-repo.key /etc/ssl/nginx/
-ADD backend.conf /etc/nginx/conf.d/
+#ADD backend.conf /etc/nginx/conf.d/
 
 # Get other files required for installation
 RUN wget -q -O - http://nginx.org/keys/nginx_signing.key | apt-key add -
